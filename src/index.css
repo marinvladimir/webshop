@@ -28,6 +28,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  @media (max-width: 480px) {
+    display: block;
+    min-width: 0px;
+  }
 }
 
 h1 {
