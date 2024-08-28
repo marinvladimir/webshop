@@ -25,8 +25,6 @@ describe("ProductList Component", () => {
         <ProductList products={mockProduct} />
       </CartProvider>
     );
-
-    // Check if all products are rendered
     expect(screen.getByText("Product 1")).toBeInTheDocument();
   });
 
@@ -36,8 +34,6 @@ describe("ProductList Component", () => {
         <ProductList products={mockProduct} />
       </CartProvider>
     );
-
-    // Check if product descriptions are rendered
     expect(screen.getByText("Description 1")).toBeInTheDocument();
   });
 });
