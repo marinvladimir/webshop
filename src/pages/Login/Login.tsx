@@ -20,9 +20,9 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div>
+    <main>
       <h2>Login</h2>
-      <Form onSubmit={handleSubmit}>
+      <Form id="login" onSubmit={handleSubmit}>
         <InputGroup>
           <label>Username:</label>
           <input
@@ -44,7 +44,7 @@ const Login: React.FC = () => {
         {error && <p style={{ color: "red" }}>{error}</p>}
         <LogoutButton type="submit">Login</LogoutButton>
       </Form>
-    </div>
+    </main>
   );
 };
 

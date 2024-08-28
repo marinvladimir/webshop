@@ -7,14 +7,9 @@ import SearchInput from "../../components/SearchInput/SearchInput";
 import Pagination from "../../components/Pagination/Pagination";
 import PageSizeDropdown from "../../components/PageSizeDropdown/PageSizeDropdown";
 import { useCart } from "../../context/CartContext";
-import {
-  Details,
-  ProductButton,
-  ProductCard,
-  ProductContainer,
-  ProductImage,
-} from "./ProductListStyledComponents";
+import { ProductContainer } from "./ProductListStyledComponents";
 import { PriceRange, Product, ProductProps } from "../../types";
+import ProductItem from "../../components/ProductItem/ProductItem";
 
 const DEFAULT_PAGE_SIZE = 20;
 
@@ -116,43 +111,12 @@ const ProductList: React.FC<ProductProps> = ({ products }) => {
 
       <ProductContainer>
         {paginatedProducts.map((product) => (
-          <ProductCard key={product.id}>
-            <ProductImage src={product.images[0]} alt={product.title} />
-            <h3 style={{ fontSize: "1.2em", margin: "0px 0" }}>
-              {product.title}
-            </h3>
-            <div>
-              <p style={{ fontSize: "1em", color: "#c7253e" }}>
-                {calculateDiscountedPrice(
-                  product.price,
-                  product.discountPercentage
-                ).toFixed(2)}
-                {product.discountPercentage && (
-                  <span
-                    style={{
-                      textDecoration: "line-through",
-                      marginLeft: "8px",
-                      color: "#888",
-                    }}
-                  >
-                    ${product.price.toFixed(2)}
-                  </span>
-                )}
-              </p>
-              <Details>{truncateText(product.description, 100)}</Details>
-              <div>
-                <ProductButton onClick={() => openModal(product)}>
-                  View Details
-                </ProductButton>
-                <ProductButton
-                  disabled={product.availabilityStatus !== "In Stock"}
-                  onClick={() => addToCart(product)}
-                >
-                  Add to Cart
-                </ProductButton>
-              </div>
-            </div>
-          </ProductCard>
+          <ProductItem
+            key={product.id}
+            product={product}
+            onViewDetails={openModal}
+            onAddToCart={addToCart}
+          />
         ))}
         <Modal isOpen={isModalOpen} onClose={closeModal}>
           {selectedProduct && (

@@ -3,11 +3,12 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./context/CartContext";
 import Login from "./pages/Login/Login";
-import ProductList, { Product } from "./pages/ProductList/ProductList";
+import ProductList from "./pages/ProductList/ProductList";
 import styled from "styled-components";
 import { breakpoints } from "./styles/breakpoints";
 import { useEffect, useState } from "react";
 import { fetchProducts } from "./services/productService";
+import { Product } from "./types";
 
 export const LogoutButton = styled.button`
   margin-bottom: 20px;
