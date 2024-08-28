@@ -6,21 +6,25 @@ const SortOptions: React.FC<SortOptionsProps> = ({
   selectedSort,
   onSortChange,
 }) => {
+  const optionValues = [
+    { value: "", text: "None" },
+    { value: "priceAsc", text: "Price: Low to High" },
+    { value: "priceDesc", text: "Price: High to Low" },
+    { value: "nameAsc", text: "Name: A to Z" },
+  ];
+
   return (
-    <div
-      style={{
-        marginBottom: "20px",
-      }}
-    >
+    <div style={{ marginBottom: "20px" }}>
       <h3>Sort by</h3>
       <Select
         value={selectedSort}
         onChange={(e) => onSortChange(e.target.value)}
       >
-        <option value="">None</option>
-        <option value="priceAsc">Price: Low to High</option>
-        <option value="priceDesc">Price: High to Low</option>
-        <option value="nameAsc">Name: A to Z</option>
+        {optionValues.map(({ value, text }) => (
+          <option key={value} value={value}>
+            {text}
+          </option>
+        ))}
       </Select>
     </div>
   );

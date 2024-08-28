@@ -9,6 +9,8 @@ const PageSizeDropdown: React.FC<PageSizeDropdownProps> = ({
     onPageSizeChange(Number(event.target.value));
   };
 
+  const paginationValues = [5, 10, 20, 50, 100];
+
   return (
     <div style={{ marginBottom: "20px" }}>
       <label htmlFor="pageSize" style={{ marginRight: "10px" }}>
@@ -24,11 +26,9 @@ const PageSizeDropdown: React.FC<PageSizeDropdownProps> = ({
           border: "1px solid #ddd",
         }}
       >
-        <option value={5}>5</option>
-        <option value={10}>10</option>
-        <option value={20}>20</option>
-        <option value={50}>50</option>
-        <option value={100}>100</option>
+        {paginationValues.map((value) => (
+          <option value={value}>{value}</option>
+        ))}
       </select>
     </div>
   );

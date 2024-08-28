@@ -1,10 +1,8 @@
-import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { useCart } from "../context/CartContext";
 import Cart from "../components/Cart/Cart";
 
-// Mock the useCart hook
 jest.mock("../context/CartContext");
 
 describe("Cart Component", () => {
@@ -31,10 +29,7 @@ describe("Cart Component", () => {
   ];
 
   beforeEach(() => {
-    // Reset the mock before each test
     jest.clearAllMocks();
-
-    // Set up the mock implementation
     (useCart as jest.Mock).mockReturnValue({
       cart: mockCart,
       clearCart: mockClearCart,

@@ -1,4 +1,3 @@
-// src/AuthContext.tsx
 import React, {
   createContext,
   useState,
@@ -60,8 +59,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     const token = localStorage.getItem("accessToken");
     if (token) {
       try {
-        // For DummyJSON, a token refresh might be implemented differently.
-        // If there is no refresh endpoint, consider re-logging or managing tokens differently.
         const response = await fetch("https://dummyjson.com/auth/refresh", {
           method: "POST",
           headers: {
