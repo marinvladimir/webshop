@@ -1,12 +1,3 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 SPA katalog proizvoda - Dokumentacija
 Sadržaj
 Uvod
@@ -37,13 +28,13 @@ yarn run dev (currently port set to 3000)
 RUNNING TESTS
 yarn test
 
+USER LOGIN EXAMPLE:
+user: emilys
+pass: emilyspass
+
 Glavne Značajke
 Autentifikacija
 Aplikacija koristi autentifikaciju putem DummyJSON API-ja. Nakon uspješne prijave, korisnički token se pohranjuje u localStorage. Token se koristi za autorizaciju API zahtjeva i automatski se osvježava kada istekne.
-
-USER EXAMPLE:
-user: emilys
-pass: emilyspass
 
 Login: Korisnici se prijavljuju pomoću korisničkog imena i lozinke. Ako prijava uspije, token se pohranjuje u localStorage.
 Token Refresh: Token se automatski osvježava koristeći refresh token mehanizam.
