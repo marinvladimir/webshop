@@ -1,6 +1,6 @@
 import React from "react";
 import { useCart } from "../../context/CartContext";
-import { CartButton, CartContainer } from "./CartStyledComponents";
+import { CartBase, CartButton, CartContainer } from "./CartStyledComponents";
 
 const Cart: React.FC = () => {
   const { cart, clearCart, decrementItemQuantity } = useCart();
@@ -21,17 +21,7 @@ const Cart: React.FC = () => {
       ) : (
         <>
           {cart.map((item) => (
-            <div
-              key={item.id}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginBottom: "16px",
-                justifyContent: "center",
-                flexDirection: "column",
-                borderTop: "1px solid black",
-              }}
-            >
+            <CartBase key={item.id}>
               <img
                 src={item.images && item?.images[0]}
                 alt={item.title}
@@ -60,7 +50,7 @@ const Cart: React.FC = () => {
                   Remove
                 </CartButton>
               </div>
-            </div>
+            </CartBase>
           ))}
           <div style={{ borderTop: "1px solid black", paddingTop: "16px" }}>
             <CartButton onClick={clearCart}>Clear Cart</CartButton>

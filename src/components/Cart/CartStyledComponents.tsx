@@ -26,3 +26,12 @@ export const CartContainer = styled.div`
     padding: 0px;
   }
 `;
+
+export const CartBase = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: center;
+  flex-direction: column;
+  border-top: 1px solid black;
+`;

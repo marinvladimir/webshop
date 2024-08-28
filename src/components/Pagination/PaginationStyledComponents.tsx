@@ -10,3 +10,10 @@ export const PaginateButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s;
 `;
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+`;

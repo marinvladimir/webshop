@@ -1,5 +1,8 @@
 import React from "react";
-import { PaginateButton } from "./PaginationStyledComponents";
+import {
+  PaginateButton,
+  PaginationWrapper,
+} from "./PaginationStyledComponents";
 import { PaginationProps } from "../../types";
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -14,14 +17,7 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "20px",
-      }}
-    >
+    <PaginationWrapper>
       <PaginateButton
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -37,7 +33,7 @@ const Pagination: React.FC<PaginationProps> = ({
       >
         Next
       </PaginateButton>
-    </div>
+    </PaginationWrapper>
   );
 };
 
