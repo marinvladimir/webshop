@@ -51,11 +51,13 @@ Pretraživanje proizvoda implementirano je pomoću input trake s debouncing-om.
 Paginacija
 Aplikacija podržava paginaciju kako bi omogućila pregled velikih skupova podataka. Broj prikazanih stavki po stranici može se promijeniti pomoću padajućeg izbornika (default 20).
 
-Sigurnosne Mjere
+Sigurnosne Mjere:
+
 HTTPS: Osigurava šifriranje podataka tijekom prijenosa između klijenta i servera.
 Sigurno pohranjivanje osjetljivih podataka: Koristi se localStorage za pohranu tokena, s planom prelaska na sigurnije metode poput HttpOnly kolačića.
 Zaštita od XSS i CSRF napada: Sanitizacija korisničkog unosa i implementacija CSRF tokena za zaštitu od napada.
 Ograničenje pristupa i autentifikacija: Stroge kontrole pristupa osiguravaju da samo ovlašteni korisnici mogu pristupiti resursima (Content Security Policy, CSP)
+
 Third-Party Security Vulnerabilitiji
 Potreban update 3rd-party dependencyja i libova na zadnju secure verziju pomoću toolova kao npm (Node Package Manager) audit.
 Uporaba Lintera za detektiranje vulnerabilityja
