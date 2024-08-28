@@ -1,7 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import ProductList, { Product } from "../pages/ProductList/ProductList";
+import ProductList from "../pages/ProductList/ProductList";
 import { CartProvider } from "../context/CartContext";
+import { Product } from "../types";
 
 const mockProduct: Product[] = [
   {

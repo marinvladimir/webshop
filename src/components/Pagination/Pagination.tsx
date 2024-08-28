@@ -1,22 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-
-const PaginateButton = styled.button`
-  padding: 8px 16px;
-  margin: 0 5px;
-  border: none;
-  background-color: #8d493a;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-`;
-
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}
+import { PaginateButton } from "./PaginationStyledComponents";
+import { PaginationProps } from "../../types";
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,

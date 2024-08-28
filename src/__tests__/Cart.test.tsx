@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { useCart } from "../context/CartContext";
-import Cart from "../components/Cart";
+import Cart from "../components/Cart/Cart";
 
 // Mock the useCart hook
 jest.mock("../context/CartContext");

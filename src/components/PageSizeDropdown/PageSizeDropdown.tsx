@@ -1,9 +1,5 @@
 import React from "react";
-
-interface PageSizeDropdownProps {
-  pageSize: number;
-  onPageSizeChange: (size: number) => void;
-}
+import { PageSizeDropdownProps } from "../../types";
 
 const PageSizeDropdown: React.FC<PageSizeDropdownProps> = ({
   pageSize,

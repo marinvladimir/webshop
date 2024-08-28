@@ -1,11 +1,6 @@
 import React from "react";
-import { StyledButton } from "./CategoryFilter";
-
-interface PriceRange {
-  label: string;
-  min: number;
-  max: number;
-}
+import { StyledButton } from "../CategoryFilter/CategoryFilterStyledComponents";
+import { PriceRange } from "../../types";
 
 const priceRanges: PriceRange[] = [
   { label: "All", min: 0, max: Infinity },

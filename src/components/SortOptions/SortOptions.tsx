@@ -1,22 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { breakpoints } from "../styles/breakpoints";
-
-const Select = styled.select`
-  padding: 10px;
-  borderradius: 4px;
-  border: 1px solid #ddd;
-  cursor: pointer;
-
-  @media (max-width: ${breakpoints.mobile}) {
-    width: 100%;
-  }
-`;
-
-interface SortOptionsProps {
-  selectedSort: string;
-  onSortChange: (sortType: string) => void;
-}
+import { Select } from "./SortOptionsStyledComponents";
+import { SortOptionsProps } from "../../types";
 
 const SortOptions: React.FC<SortOptionsProps> = ({
   selectedSort,

@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { breakpoints } from "../styles/breakpoints";
-
-const Input = styled.input`
-  width: 300px;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-
-  @media (max-width: ${breakpoints.mobile}) {
-    width: 100%;
-  }
-`;
-
-interface SearchInputProps {
-  onSearch: (query: string) => void;
-}
+import { Input } from "./SearchInputStyledComponents";
+import { SearchInputProps } from "../../types";
 
 const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");

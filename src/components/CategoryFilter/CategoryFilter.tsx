@@ -1,19 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-
-export const StyledButton = styled.button`
-  margin: 5px;
-  padding: 10px 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-`;
-
-interface CategoryFilterProps {
-  categories: string[];
-  selectedCategory: string;
-  onSelectCategory: (category: string) => void;
-}
+import { StyledButton } from "./CategoryFilterStyledComponents";
+import { CategoryFilterProps } from "../../types";
 
 const CategoryFilter: React.FC<CategoryFilterProps> = ({
   categories,

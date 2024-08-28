@@ -1,6 +1,6 @@
 import "./App.css";
 import { AuthProvider, useAuth } from "./context/AuthContext";
-import Cart from "./components/Cart";
+import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./context/CartContext";
 import Login from "./pages/Login/Login";
 import ProductList, { Product } from "./pages/ProductList/ProductList";

@@ -7,14 +7,7 @@ import React, {
   ReactNode,
   useCallback,
 } from "react";
-
-interface AuthContextProps {
-  isAuthenticated: boolean;
-  login: (username: string, password: string) => Promise<void>;
-  logout: () => void;
-  refreshAuthToken: () => Promise<void>;
-  user: string | null;
-}
+import { AuthContextProps } from "../types";
 
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 

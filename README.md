@@ -30,8 +30,12 @@ Node.js (verzija 14 ili novija)
 npm ili yarn
 Koraci za Postavljanje:
 
-yarn install
-yarn run dev
+RUNNING LOCAL ENV
+yarn
+yarn run dev (currently port set to 3000)
+
+RUNNING TESTS
+yarn test
 
 Glavne Značajke
 Autentifikacija

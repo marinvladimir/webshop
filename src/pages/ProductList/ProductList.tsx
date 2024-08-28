@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Modal from "../../components/Modal";
-import PriceFilter from "../../components/PriceFilter";
-import CategoryFilter from "../../components/CategoryFilter";
-import SortOptions from "../../components/SortOptions";
-import SearchInput from "../../components/SearchInput";
-import Pagination from "../../components/Pagination";
-import PageSizeDropdown from "../../components/PageSizeDropdown";
+import Modal from "../../components/Modal/Modal";
+import PriceFilter from "../../components/PriceFilter/PriceFilter";
+import CategoryFilter from "../../components/CategoryFilter/CategoryFilter";
+import SortOptions from "../../components/SortOptions/SortOptions";
+import SearchInput from "../../components/SearchInput/SearchInput";
+import Pagination from "../../components/Pagination/Pagination";
+import PageSizeDropdown from "../../components/PageSizeDropdown/PageSizeDropdown";
 import { useCart } from "../../context/CartContext";
 import {
   Details,
@@ -14,31 +14,9 @@ import {
   ProductContainer,
   ProductImage,
 } from "./ProductListStyledComponents";
-
-export interface Product {
-  availabilityStatus: string;
-  brand: string;
-  id: number;
-  title: string;
-  price: number;
-  rating: number;
-  discountPercentage?: number;
-  images: string[];
-  description: string;
-  category: string;
-}
-
-interface PriceRange {
-  label: string;
-  min: number;
-  max: number;
-}
+import { PriceRange, Product, ProductProps } from "../../types";
 
 const DEFAULT_PAGE_SIZE = 20;
-
-interface ProductProps {
-  products: Product[];
-}
 
 const ProductList: React.FC<ProductProps> = ({ products }) => {
   const [isModalOpen, setModalOpen] = useState(false);
